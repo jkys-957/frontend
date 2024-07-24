@@ -1,0 +1,48 @@
+/* 전체 선택자 */
+* {
+    margin: 0;
+}
+
+/* 태그(타입) 선택자 */
+p {
+    color: beige;
+    font-size: xx-large;
+}
+
+body {
+    background-color: blue;
+}
+
+/* 중복되는 코드는 최하단에 있는 코드가 반영됌 */
+body {
+    background-color: skyblue;
+}
+
+/* 클래스 선택자 :  복수의 의미 */
+.red {
+    color:red;
+}
+
+/* 아이디 선택자 : 단수의 의미 */
+#blue {
+    color: blue;
+}
+
+/* 그룹 선택자 */
+.red, .pink {
+    font-size: xx-small;
+}
+
+.red.pink {
+    font-size: large;
+}
+
+.pink {
+    color:pink;
+}
+
+p.red {
+    font-size: medium;
+}
+
+
