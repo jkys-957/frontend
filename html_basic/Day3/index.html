@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그</title>
+</head>
+
+<body>
+    <h1>폼 태그</h1>
+    <form action="http://localhost:7070/input" method="post">
+        <fieldset>
+            <label>아이디 : <input type="text" name="user-id" value="wwwwww"></label><br>
+            <label for="user-passwd">비밀번호 : </label>
+            <input type="password" id="user-passwd" name="user-passwd" maxlength="10">
+        </fieldset>
+        <fieldset>
+            <label for="search">검색 : </label>
+            <input type="search" name="search">
+            <br>
+            <input type="url" name="url">
+            <br>
+            <p>선물 포장</p>
+            <label>yes : <input type="radio" name="gift" value="yes"></label>
+            <label>no : <input type="radio" name="gift" value="no"></label>
+            <br>
+            <p>제품 선택</p>
+            <label>3kg <input type="checkbox" name="3kg" value="3kg"></label>
+            <label>5kg <input type="checkbox" name="5kg" value="5kg"></label>
+            <br>
+            <label>첨부파일 : <input type="file"></label>
+        </fieldset>
+        <fieldset>
+            <input type="hidden" name="hidden" value="12342342342342">
+            <label>전송 : <input type="submit"></label>
+            <br>
+            <label>초기화 : <input type="reset"></label>
+        </fieldset>
+    </form>
+</body>
+
+</html>
