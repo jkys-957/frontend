@@ -45,4 +45,15 @@ p.red {
     font-size: medium;
 }
 
+/* 자손 선택자 */
+.outer li {
+    color:olivedrab;
+}
+
+/* 자식(1촌) 선택자 */
+.outer > li {
+    color: dodgerblue;
+}
+
+
 
