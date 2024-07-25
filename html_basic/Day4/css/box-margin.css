@@ -1,0 +1,17 @@
+body {
+    background-color: #222;
+}
+
+#container {
+    background-color: #fff;
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#content1 {
+    background-color: #0f0;
+    width: 600px;
+    margin: 20px;
+    padding: 20px;
+}

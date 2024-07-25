@@ -1,0 +1,66 @@
+body {
+    font-size: 20px;
+}
+
+h1 {
+    font-family: D2Coding;
+    font-size: 3em;
+    color: #ff00ff;
+    text-align: center;
+    line-height: 20px;
+    text-decoration: line-through;
+    text-shadow: 5px 5px 3px black;
+}
+
+.accent {
+    font-size: 150%;
+    font-weight: 600;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.trans1 {
+    text-transform: capitalize;
+    letter-spacing: 2em;
+}
+.trans2 {
+    text-transform: uppercase;
+}
+.trans3 {
+    text-transform: lowercase;
+    word-spacing:  3em;
+}
+
+.book1 {
+    /* list-style-type: upper-alpha; */
+    list-style-image: url('image/1.png');
+    list-style-position: inside;
+}
+
+.book1 a {
+    text-decoration: none;
+    color: #000;
+}
+
+table {
+    caption-side: bottom;
+    border: 1px solid black;
+    border-color: #000;
+    border-style: dotted;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px;
+    border-color: plum;
+    border-style: dashed;
+}
+
+td {
+    border: 1px;
+    border-color: yellowgreen;
+    border-style: solid;
+    padding: 3px 6px 3px 6px;
+}

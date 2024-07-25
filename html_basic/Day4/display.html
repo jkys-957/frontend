@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 원래 없는 것과 같은데 요즘 반응형 웹 때문에 자동입력 돼 있는 거. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            border: 1px solid yellowgreen;
+            padding: 20px;
+            margin: 0 20px;
+            display: inline-block;
+        }
+
+        div {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        #box1 {
+            background: #ffd800;
+            float: left;
+        }
+
+        #box2 {
+            background: #0094ff;
+            float: left;
+        }
+
+        #box3 {
+            background: #00ff21;
+        }
+
+        #box4 {
+            background: #a874ff;
+            clear: left;
+    /* clear는 float 를 종료하는 개념 */
+        }
+
+        #box5 {
+            background: yellowgreen;
+            clear: left;
+        }
+
+        #pos1 {
+            position: relative;
+            left: 100px;
+            top: 5px;
+        }
+        /* 부모 태그를 기준으로 함. */
+        #pos2 {
+            position: absolute;
+            right: 100px;
+            top: 500px;
+        }
+        #pos3 {
+            position: absolute;
+            top: 550px;
+            left: 50px;
+        }
+        /* absolute 는 브라우저 전체 창을 기준으로 한다. */
+
+        #attr{
+            position: absolute;
+            top: 580px;
+            list-style: none;
+        }
+
+        #attr li {
+            padding: 5px 30px;
+        }
+
+        #attr li a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #000;
+        }
+        a[target="_blank"] {
+            padding-right: 30px;
+            background-color: antiquewhite;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+            <li>menu 4</li>
+        </ul>
+    </nav>
+
+    <h1>float</h1>
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+    <div id="box4">박스4</div>
+    
+    <div id="box5">
+        <p id="pos1">레드향</p>
+    </div>
+    <p id="pos2">레드향은 귤과 한라봉을 교배해서 만들었다.</p>
+    <p id="pos3">비타민 C와 비타민 D가 풍부하다.</p>
+
+    <ul id="attr">
+        <li><a href="#" target="_blank">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JAVASCRIPT</a></li>
+    </ul>
+
+</body>
+</html>                                                                                                                                                                                                                                                 
