@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동기 비동기</title>
+</head>
+<body>
+    <script>
+        // 동기 처리
+        // function test() {
+        //     for (let i = 0; i < 1000; i++) {
+        //         console.log(1);
+        //     }
+        //     console.log(2);
+        // }
+        // test();
+
+        // 자바스크립트 비동기 처리 예 - 콜백함수
+        // 1
+        // console.log('1등!');
+
+        // 2
+        // setTimeout(function() {
+        //     console.log('2등!');
+        // }, 2000);
+        // setTimeout(()=> {
+        //     console.log('2등!')
+        // }, 2000);
+
+        // // 3
+        // setTimeout(function() {
+        //     console.log('3등!');
+        // }, 2000);
+
+
+        async function getData() {
+            try {
+                const response = await fetch('/js_basic/Day7/api.html');
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        getData();
+    </script>
+</body>
+</html>

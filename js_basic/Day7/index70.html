@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동기 비동기</title>
+</head>
+<body>
+  <script>
+    // 동기 예
+    // function test() {
+    //   for (let i = 0; i < 10000; i++) {
+    //     console.log(1);
+    //   }
+    //   console.log(2);
+    // }
+    // test();
+    // 비동기 예
+    // 1
+    // console.log('1등!');
+    // // 2
+    // setTimeout(() => {
+    //   console.log('2등!');
+    // }, 2000);
+    // // 3
+    // setTimeout(function() {
+    //   console.log('3등!');
+    // }, 2000);
+
+    // 자바스크립트 비동기 처리 예 - 콜백함수
+    // // 1
+    // console.log("1등!");
+    // // 2
+    // setTimeout(()=>{
+    //   console.log("2등!");
+    //   // 3
+    //   setTimeout(()=>{
+    //     console.log("3등!")
+    //   }, 2000);
+    // }, 2000);
+
+    // 자바스크립트 비동기 처리 예 - 프로미스 객체
+    // const helloPromise = new Promise((resolve, reject)=>{
+    //     // 생성 자체는 pending
+    //     // let isSuccess = false;
+    //     // if (!isSuccess) {
+    //     //   reject(false); // catch 호출
+    //     //   return;
+    //     // }
+    //     console.log("1등");
+    //     setTimeout(() => {
+    //       resolve(); // then 호출
+    //     }, 2000);
+    // });
+
+    // helloPromise
+    // .then((res) => {
+    //   console.log("2등");
+    //   return new Promise((resolve, reject) => {
+    //   setTimeout(() => resolve(), 2000);
+    //   });
+    // })
+    // .then((res) => {
+    //   console.log("3등");
+    // })
+    // .catch((err) => {
+    //   console.log(err);
+    // });
+
+    // 자바스크립트 비동기 처리 예 - async await
+    async function getData() {
+      try {
+        const response = await fetch('/api');
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    getData();
+  </script>
+</body>
+</html>
