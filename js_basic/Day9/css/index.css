@@ -1,0 +1,23 @@
+#screen {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    user-select: none;
+}
+
+/* id="screen" class="waiting" 일 때 */
+/* 준비 상태 */
+#screen.waiting {
+    background-color: aquamarine;    
+}
+
+/* 게임 시작 */
+#screen.ready {
+    background-color: hotpink;
+    color: blue;
+}
+
+/* 게임 결과 */
+#screen.now {
+    background-color: greenyellow;
+}

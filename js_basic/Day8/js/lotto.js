@@ -39,8 +39,8 @@ $form.addEventListener('submit', async (event) => { // 변수명은 event일 필
     if(new Set(myNumbers).size !== 6)
         return alert('중복된 숫자가 있습니다.')
     myNumbers.find((v) => {console.log(v); true});
-    if(myNumbers.find( (v) => v > 45 || v < 1))  // 0 검사가 안돼
-    // if(myNumbers.find( (v) => v !== undefined || (v > 45 || v < 1)))
+    if(myNumbers.some( (v) => v > 45 || v < 1))  // some으로 변경하여 0은 굳이점검하지 않아도 됌.
+    //if(myNumbers.some((v) => v == 0 || (v > 45 || v < 1))) // 0 검사가 안돼
         return alert('1부터 45까지만 입력하세요.');
     const candidate = Array(45).fill().map( (v, i) => i + 1)
     // 45개의 숫자 (위에 방법으로 고침)
@@ -62,15 +62,60 @@ $form.addEventListener('submit', async (event) => { // 변수명은 event일 필
     for(let i = 0; i < winBalls.length; i++) {
         await setTimeoutPromise(1000);
         console.log('당첨번호~~ : ' + winBalls[i]);
-        drawBall(winBalls[i], $result);
+        drawBall(winBalls[i], $result);  // 그린다 -> 태그를 만든다.
     }
     await setTimeoutPromise(1000);
     console.log('보너스 번호~~ : ' + bonus);
     drawBall(bonus, $bonus);
+    let count = 0;
+    let countBonus = 0;
+    // for(let i = 0; i < myNumbers.length; i++){
+    //     for(let j = 0; j < winBalls.length; j++){
+    //         if(myNumbers[i] == winBalls[j])
+    //             count = count + 1;
+    //     }
+    // }
+    // 이중 for문과 같은 다른 문법이 있음
+    myNumbers.forEach((my) => {
+        if(winBalls.includes(my))
+            count++;
+    });
+
+    // for(let i = 0; i < myNumbers.length; i++){
+    //     if(myNumbers[i] == bonus)
+    //         countBonus += 1;
+    // }
+
+if(myNumbers.includes(bonus))
+    countBonus++;
+    
+    console.log(count);
+    if(count == 6){
+        alert('1등!!!');
+    } else if (count == 5) {
+        if(countBonus > 0)
+            alert('2등!!');
+        else
+            alert('3등!!');
+    } else if(count == 4) {
+        alert('4등');
+    } else if(count == 3) {
+        alert('5등');
+    } else {
+        alert('다음 기회에');
+    }
+    clickable = true;
+
 }); // 맨 마지막에는 clickable를 true 설정 해야 한다!!!
 
 function drawBall(number, $parent) {
     const $ball = document.createElement('div');
     $ball.className = 'ball';
-    $ball.style.backgroundColor = 'red'; // 내일부터
+    $ball.style.backgroundColor = 'red';
+    $ball.style.color = 'white';
+    $ball.textContent = number;
+    $parent.appendChild($ball);
 }
+
+
+{/* <div class='ball' style="bacgroundColor=red"></div>  */}

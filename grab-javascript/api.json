@@ -1,0 +1,38 @@
+[
+    {
+        "name": "농구공 1호",
+        "price": 50000,
+        "seller": "서범진",
+        "imageUrl": "images/products/basketball1.jpeg"
+    },
+    {
+        "name": "농구공 2호",
+        "price": 52000,
+        "seller": "서범진",
+        "imageUrl": "images/products/basketball2.jpg"
+    },
+    {
+        "name": "농구공 3호",
+        "price": 53000,
+        "seller": "서범진",
+        "imageUrl": "images/products/basketball3.jpg"
+    },
+    {
+        "name": "노트북 1호",
+        "price": 500000,
+        "seller": "서범진",
+        "imageUrl": "images/products/notebook1.jpg"
+    },
+    {
+        "name": "노트북 2호",
+        "price": 520000,
+        "seller": "서범진",
+        "imageUrl": "images/products/notebook2.jpg"
+    },
+    {
+        "name": "축구공",
+        "price": 15000,
+        "seller": "서범진",
+        "imageUrl": "images/products/soccerball1.jpg"
+    }
+]
